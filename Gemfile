@@ -41,3 +41,22 @@ gem 'jbuilder', '~> 1.2'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'bootstrap-sass'
+gem 'devise'
+gem 'pg'
+gem 'sendgrid'
+gem 'simple_form'
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller', :platforms=>[:mri_21]
+  gem 'foreman'
+  gem 'hub', :require=>nil
+  gem 'rails_layout'
+end
+
+group :production do
+  gem 'thin'
+end
+
