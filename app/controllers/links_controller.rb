@@ -21,10 +21,6 @@ class LinksController < ApplicationController
   # GET /links/new
   def new
     @link = Link.new
-    if @link.save
-      redirect_to @link
-    else
-    end
   end
 
   # GET /links/1/edit
