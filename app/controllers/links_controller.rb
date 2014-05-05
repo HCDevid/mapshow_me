@@ -15,11 +15,16 @@ class LinksController < ApplicationController
   # GET /links/1
   # GET /links/1.json
   def show
+    @link = Link.find(params[:id])
   end
 
   # GET /links/new
   def new
     @link = Link.new
+    if @link.save
+      redirect_to @link
+    else
+    end
   end
 
   # GET /links/1/edit
