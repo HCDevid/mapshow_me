@@ -1,12 +1,13 @@
 <%= simple_form_for(@link) do |f| %>
   <%= f.error_notification %>
-
-  <div class="form-inputs">
+<div class = "row">
+  <div class="form-inputs col-md-5 col-md-offset-3">
     <!-- <%= f.input :in_url %> :in_url needs to be randomly generated based on :out_url-->
-    <%= f.input :out_url, label: 'URL of Google Maps Address' , placeholder: 'https://www.google.com/maps/place/Burj+Khalifa/@25.197119,55.274204,17z/data=!3m1!4b1!4m2!3m1!1s0x3e5f43348a67e24b:0xff45e502e1ceb7e2'%>
+    <%= f.input :out_url, required: false, input_html: {class: 'form-control input-lg', style: 'text-align:center;margin:0 auto;'}, label: false , placeholder: 'https://www.google.com/maps/place/Burj+Khalifa/@25.197119,55.274204,17z/data=!3m1!4b1!4m2!3m1!1s0x3e5f43348a67e24b:0xff45e502e1ceb7e2'%>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-actions ">
+    <%= f.button :submit, 'Try it Out!', class: 'btn btn-lg btn-primary col-md-1', style: 'margin: 0 auto;' %>
   </div>
 <% end %>
+</div>
