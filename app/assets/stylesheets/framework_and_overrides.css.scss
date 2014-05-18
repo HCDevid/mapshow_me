@@ -7,6 +7,10 @@
 // import the CSS framework
 @import "bootstrap";
 
+// variable declaration
+$primary-background-color: #110022;
+$alt-back-color: lighten($primary-background-color, 10%);
+
 // make all images responsive by default
 img {
   @extend .img-responsive;
@@ -107,8 +111,9 @@ h1 {
 .container-full {
   margin: 0 auto;
   width: 100%;
-  min-height:100%;
-  background-color:#110022;
+  min-height:50%;
+  height: 600px;
+  background-color: $primary-background-color;
   color:#eee;
   overflow:hidden;
 }
@@ -120,4 +125,17 @@ h1 {
 
 .v-center {
   margin-top:7%;
+}
+
+.brighten {
+  background-color: $alt-back-color !important;
+}
+
+.hovertext {
+  color: $alt-back-color !important;
+  background-color: $gray-lighter !important;
+}
+
+.mainchange {
+  background-color: white;
 }
