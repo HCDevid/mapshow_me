@@ -34,8 +34,9 @@ class LinksController < ApplicationController
 
     respond_to do |format|
       if @link.save
+        format.js
         format.html { redirect_to @link, notice: 'Link was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @link }
+        # format.json { render action: 'show', status: :created, location: @link }
       else
         format.html { render action: 'new' }
         format.json { render json: @link.errors, status: :unprocessable_entity }
