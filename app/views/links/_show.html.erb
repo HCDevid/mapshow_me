@@ -1,7 +1,15 @@
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
+<div class = "row">
+  <p style = "font-size: 18px">Your New Location URL: 
+    <a href= <%= "http://MapShow.Me/#{@link.in_url}" %> >
+      MapShow.Me/<%= @link.in_url %>
+    </a>    &nbsp;
+  <button type = "button" class = "btn btn-default btn-sm clip_button" data-clipboard-text = <%= "http://MapShow.Me/#{@link.in_url}" %> >
+    Copy to Clipboard
+  </button>
+  </p>
+</div>
 
-<p>Your New Location URL: 
-  <a href= <%= @link.out_url %> >
-  	MapShow.Me/<%= @link.in_url %>
-  </a>
-</p>
+<script type = "text/javascript">
+  var client = new ZeroClipboard( $('.clip_button'))
+</script>

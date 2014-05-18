@@ -1,3 +1,4 @@
+// Sets main backgrounds to change color on hovers
 $(document).ready(
   function() {
     $('.container-full').on('mouseenter', function() {
@@ -11,6 +12,7 @@ $(document).ready(
     });
 });
 
+// Sets panels at bottom to change color based on hovers
 $(document).ready(
   function() {
     $('.panel-default').on('mouseenter', function() {
@@ -22,3 +24,13 @@ $(document).ready(
       $(this).find('.panel-heading').removeClass('hovertext')
     });
 });
+
+// ZeroClipboard - couldn't get this to work
+// $(document).ready(
+//   $('.text-center').change(function() {
+//     var client = new ZeroClipboard( $('.clip_button') );
+//       client.on( 'copy', function(event) {
+//         event.clipboardData.setData('text/plain', event.target.closest('a'));
+//       } );
+
+// }));
